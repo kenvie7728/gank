@@ -1,3 +1,5 @@
+var t=0;var i=2;
+
 function start(){
 	location.href='set.html';
 }
@@ -27,6 +29,10 @@ function game(){
 	unsort(z);
 	report(z);
 	document.title='结果';
+}
+
+function game2(){
+	location.href="msg.html";
 }
 
 function back(){
@@ -98,3 +104,36 @@ function report(a){
 	}
 	document.write("<input type='button' style='background-color:green;color:white;margin-top:20px;height:30px;width:150px;' value='返回' onclick='start()'/>");
 }
+
+
+//卡牌部分的js文件：
+
+function turn(){
+		turnN();
+}
+
+function turnN(){
+		if(i==5){
+			var s=document.getElementById('k2');
+			s.value='结束';
+			i++;
+		}
+		else if(i==6){
+			back();
+		}
+		else{
+	var s=document.getElementById('k1');
+	s.style.backgroundImage="url(./img/kill.PNG)";
+	var s1=document.getElementById('k2');
+	if(t==0){
+		s1.value='隐藏身份并进入下一玩家';
+		t=1;
+	}
+	else if(t==1){
+		s.style.backgroundImage="url(./img/cardB.jpg)";
+		s1.value='查看'+i+'号玩家身份';
+		t=0;
+		i++;
+	}
+	}
+	}
