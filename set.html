@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/set.css" />
+		<script type="text/javascript" src="js/my.js" ></script>
+		<title>设置</title>
+	</head>
+	<body>
+		<div id="b1">杀人游戏简化版</div>
+		<input type="button" value="介绍" id="b2" onclick="tell()"/>
+		<div></div>
+		<div id="b3">最纯粹的推理</div>
+		<div id="b4">总人数</div>
+		<div id="b8">
+			<div id="b5">此版本的最小人数为：3 最大人数为：18</div>
+			<div class="c3">人数</div>
+			<div class='c5'><input type="text"/ value="8" class="c2" id='c1' onchange="checkAll()"></div>
+		</div>
+		
+		<div class='c1'>杀手</div>
+		<div class="c4">
+			<div class="c3">人数</div>
+			<div class='c5'><input type="text" class="c2" value="1" id="c2" onchange="check1()"/></div>
+		</div>
+		
+		<div class="c1">水民</div>
+		<div class="c4">
+			<div class="c3">人数</div>
+			<div class='c5'><input type="text" class="c2" value="7" id="c3" onchange="check2()"/></div>
+		</div>
+		
+		<input type="button" value="返回列表" id="b9" onclick="back()"/>
+		<input type="button" value="开始游戏" id='b10' onclick="game()"/>
+	</body>
+</html>

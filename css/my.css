@@ -1,0 +1,40 @@
+.hh{
+	background-color: blue;
+	color: white;
+	font-size: larger;
+	height: 20px;
+	width: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+
+p{
+	color: green;
+	margin-top: 50px;
+	margin-left: 20px;
+	padding-top: 10px;
+}
+.hm{
+	border: 1px solid;
+	border-color: blue;
+	height: auto;
+	width: auto;
+}
+
+.hc{
+	border: 1px solid;
+	border-color: gray;
+	margin-top: 180px;
+	margin-left: 150px;
+	margin-bottom: 180px;
+	margin-right: 150px;
+	
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+	text-align: center;
+	color: blue;
+	font-family: "楷体";
+	font-size: 20px;
+}
