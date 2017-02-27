@@ -8,29 +8,6 @@ function tell(){
 	location.href='tell.html';
 }
 
-function game(){
-	var s=document.getElementById('c1');
-	var s1=document.getElementById('c2');
-	var s2=document.getElementById('c3');
-	
-	var a=parseInt(s.value);
-	var b=parseInt(s1.value);
-	var c=parseInt(s2.value);
-	
-	var z=new Array(a);
-	
-	for(var i=0;i<b;i++){
-	z[i]='<h style="clear:both; color:red; font-weight:bold;">杀手</h>';
-	}
-	
-	for(var i=b;i<b+c;i++){
-		z[i]='水民';
-	}
-	unsort(z);
-	report(z);
-	document.title='结果';
-}
-
 function game2(){
 	location.href="msg.html";
 }
@@ -96,7 +73,9 @@ function unsort(a){
 }
 }
 
-function report(a){
+function report(){
+	var a=new Array(8);
+	a=game4(a);
 	document.write('法官大人，结果如下：'+'<br/>');
 	document.write('<br/>'+'总人数：'+a.length+'人<br/>');
 	for(var i=1;i<a.length+1;i++){
@@ -113,27 +92,53 @@ function turn(){
 }
 
 function turnN(){
-		if(i==5){
+		if(i==9){
 			var s=document.getElementById('k2');
-			s.value='结束';
+			var s1=document.getElementById('k1');
+			s1.style.backgroundImage="url(./img/chigua.PNG)";
+			s.value='法官视察';
 			i++;
 		}
-		else if(i==6){
-			back();
+		else if(i==10){
+			report();
 		}
 		else{
 	var s=document.getElementById('k1');
-	s.style.backgroundImage="url(./img/kill.PNG)";
+	s.style.backgroundImage="url(/img/cardB.jpg)";
 	var s1=document.getElementById('k2');
 	if(t==0){
+		s.style.backgroundImage="url(./img/chigua.PNG)";
 		s1.value='隐藏身份并进入下一玩家';
 		t=1;
 	}
 	else if(t==1){
-		s.style.backgroundImage="url(./img/cardB.jpg)";
+		setB();
 		s1.value='查看'+i+'号玩家身份';
 		t=0;
 		i++;
 	}
 	}
 	}
+
+
+function judge(){
+	location.href='judge.html';
+}
+
+function game3(){
+	game4();
+	document.write(a);
+}
+
+function game4(z){
+	z[0]='<h style="clear:both; color:red; font-weight:bold;">杀手</h>';
+	for(var i=1;i<9;i++){
+		z[i]='水民';
+	}
+	return z;
+}
+
+function setB(){
+	var s=document.getElementById('k1');
+	s.style.backgroundImage="url(./img/cardB.jpg)";
+}
